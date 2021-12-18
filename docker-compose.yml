@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+
+  nodejs-server:
+    image: jisjo/devflaskapp:latest
+    container_name: flask
+    networks:
+      - flask-net
+    restart: always
+
+    ports:
+      - 80:5000
+networks:
+  flask-net:
